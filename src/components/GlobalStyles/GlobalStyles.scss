@@ -5,6 +5,7 @@
     --primary: #fe2c55;
     --black: #000;
     --text-color: #333;
+    --while: #fff;
 
     // Default Layout
     --default-layout-width: 1150px;
@@ -35,4 +36,5 @@ input,
 }
 a[href] {
     color: var(--text-color);
+    text-decoration: none;
 }
