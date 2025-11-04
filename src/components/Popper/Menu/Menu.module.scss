@@ -2,7 +2,7 @@
     width: 224px;
 
     .menu-item {
-        margin-left: 0px;
+        margin-left: 0px !important;
     }
 }
 .menu-popper {
@@ -11,10 +11,33 @@
 
 .menu-item {
     width: 100%;
-    justify-content: flex-start;
+    justify-content: flex-start !important;
     border-radius: 0;
     padding: 11px 16px;
+    line-height: 1.8rem;
+    font-weight: 600;
+    &.separate {
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    }
+
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
     }
+}
+// Menu header
+.header {
+    position: relative;
+    height: 50px;
+}
+.back-btn {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
