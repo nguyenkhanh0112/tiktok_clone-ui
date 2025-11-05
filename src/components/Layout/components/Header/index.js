@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Activity } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleQuestion,
@@ -29,6 +29,9 @@ import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
 import { type } from '@testing-library/user-event/dist/type';
+import Upload from '~/pages/Upload';
+import { UploadIcon, ActivityICon, MessageIcon, SearchIcon } from '~/components/Icons';
+import Image from '~/components/images';
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
     {
@@ -130,7 +133,7 @@ function Header() {
                         </button>
                         <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
                         <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            <SearchIcon className={cx('search-btn-btn')} />
                         </button>
                     </div>
                 </HeadlessTippy>
@@ -139,9 +142,15 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
+                            <button className={cx('action-btn')}>
+                                <ActivityICon />
+                            </button>
+                            <button className={cx('action-btn')}>
+                                <MessageIcon />
+                            </button>
                         </>
                     ) : (
                         <>
@@ -151,7 +160,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? useMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/1340ace4ddea671a6321f31d274c9421~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=759f9338&x-expires=1762462800&x-signature=KBcg2jTW3PpXbpUA%2BpKc0gL0ziY%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2"
                                 alt="Nguyen Van A"
