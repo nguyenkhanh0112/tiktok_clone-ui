@@ -15,11 +15,11 @@ import Tippy from '@tippyjs/react';
 import images from '~/assets/images';
 import styles from './Header.module.scss';
 import Button from '~/components/Button/Button';
-import Search from '../Search';
+import Search from '../Search/Search';
 import Menu from '~/components/Popper/Menu/Menu';
 import 'tippy.js/dist/tippy.css';
 import { UploadIcon, InboxIcon, MessageIcon } from '~/components/Icons/Icons';
-import Image from '~/components/images';
+import Image from '~/components/Images/Images';
 import { Link } from 'react-router-dom';
 import config from '~/config';
 const cx = classNames.bind(styles);
@@ -54,7 +54,7 @@ const MENU_ITEMS = [
     },
 ];
 function Header() {
-    const currentUser = true;
+    const currentUser = false;
     // handle logic
     const handleMenuChange = (menuItem) => {
         switch (menuItem.type) {
