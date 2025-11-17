@@ -1,5 +1,3 @@
-import Following from '~/pages/Following';
-
 const routes = {
     home: '/',
     following: 'following',

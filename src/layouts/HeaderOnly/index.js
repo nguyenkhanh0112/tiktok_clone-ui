@@ -10,5 +10,4 @@ function HeaderOnly({ children }) {
         </div>
     );
 }
-
 export default HeaderOnly;
