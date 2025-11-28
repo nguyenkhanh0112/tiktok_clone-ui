@@ -46,7 +46,7 @@ function Search() {
     };
     const handleChange = (e) => {
         const searchValue = e.target.value;
-        if (!searchValue.startsWith('') || !searchValue.trim()) {
+        if (!searchValue.startsWith('')) {
             return;
         }
         setSearchValue(searchValue);
